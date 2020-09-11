@@ -20,7 +20,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
         
         
         if let url = URL(string: "https://flo.flinders.edu.au/course/view.php?id="+topicIdentifier.stringValue), NSWorkspace.shared.open(url) {
-            print("default browser was successfully opened")
+            print("Default browser was successfully opened")
         }
     }
     
@@ -28,7 +28,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
         NSLog(topicSearchtext.stringValue)
         
         if let url = URL(string: "https://flo.flinders.edu.au/course/search.php?search="+topicSearchtext.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! ?? ""), NSWorkspace.shared.open(url) {
-            print("default browser was successfully opened")
+            print("Default browser was successfully opened")
         }
     }
     
@@ -39,7 +39,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
         theUrl = theUrl + "#results-search-response"
         
         if let url = URL(string: theUrl), NSWorkspace.shared.open(url) {
-            print("default browser was successfully opened")
+            print("Default browser was successfully opened")
         }
     }
     
