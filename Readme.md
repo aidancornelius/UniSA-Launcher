@@ -5,3 +5,5 @@ An incredibly niche launcher for Flinders Learning Online and the Flinders Staff
 This app runs on MacOS 10.14+
 
 Licensed under MIT.
+
+![Screeenshot](https://github.com/aidancornelius/FLO-Launcher/raw/master/Resources/Screenshot_of_FLO_Launcher.1.0.png)
