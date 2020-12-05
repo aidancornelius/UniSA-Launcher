@@ -272,7 +272,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FLO Launcher/FLO_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FLO Launcher/Info.plist";
@@ -281,6 +281,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 2020.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.FLO-Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -294,7 +295,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FLO Launcher/FLO_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FLO Launcher/Info.plist";
@@ -303,6 +304,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 2020.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.FLO-Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -8,12 +8,12 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelegate {
+class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelegate, NSWindowDelegate {
     
     @IBOutlet weak var topicSearchtext: NSSearchField!
     @IBOutlet weak var topicIdentifier: NSSearchField!
     @IBOutlet weak var directorySearch: NSSearchField!
-    
+    @IBOutlet weak var topicSearchStuSys: NSSearchField!
     
     @IBAction func jumpToTopics(_ sender: Any) {
         NSLog(topicIdentifier.stringValue)
@@ -21,6 +21,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
         
         if let url = URL(string: "https://flo.flinders.edu.au/course/view.php?id="+topicIdentifier.stringValue), NSWorkspace.shared.open(url) {
             print("Default browser was successfully opened")
+            cleanUp()
         }
     }
     
@@ -29,6 +30,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
         
         if let url = URL(string: "https://flo.flinders.edu.au/course/search.php?search="+topicSearchtext.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! ?? ""), NSWorkspace.shared.open(url) {
             print("Default browser was successfully opened")
+            cleanUp()
         }
     }
     
@@ -40,6 +42,17 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
         
         if let url = URL(string: theUrl), NSWorkspace.shared.open(url) {
             print("Default browser was successfully opened")
+            cleanUp()
+        }
+    }
+    
+    @IBAction func searchTopicsStuSys(_ sender: Any) {
+        NSLog(topicSearchStuSys.stringValue)
+        
+        let theUrl = "https://www.flinders.edu.au/webapps/stusys/index.cfm/topic/main/?topic=" + topicSearchStuSys.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        if let url = URL(string: theUrl), NSWorkspace.shared.open(url) {
+            print("Default browser was successfully opened")
+            cleanUp()
         }
     }
     
@@ -59,9 +72,16 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
             } else {
                 return false
             }
-        } else {
+        } else if control.tag == 2 {
             if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
                 searchPeople(self)
+                return true
+            } else {
+                return false
+            }
+        } else {
+            if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
+                searchTopicsStuSys(self)
                 return true
             } else {
                 return false
@@ -69,8 +89,18 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
         }
     }
     
+    func cleanUp() {
+        // Empty our search fields and close the window
+        topicSearchtext.stringValue = ""
+        topicIdentifier.stringValue = ""
+        directorySearch.stringValue = ""
+        topicSearchStuSys.stringValue = ""
+        self.view.window?.close()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.window?.delegate = self
     }
 
     override var representedObject: Any? {
