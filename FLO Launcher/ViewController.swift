@@ -10,26 +10,23 @@ import Cocoa
 
 class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelegate, NSWindowDelegate {
     
-    @IBOutlet weak var topicSearchtext: NSSearchField!
-    @IBOutlet weak var topicIdentifier: NSSearchField!
+    @IBOutlet weak var UOSearchText: NSSearchField!
+    @IBOutlet weak var LOSearchText: NSSearchField!
     @IBOutlet weak var directorySearch: NSSearchField!
-    @IBOutlet weak var topicSearchStuSys: NSSearchField!
-    
-    @IBAction func jumpToTopics(_ sender: Any) {
-        NSLog(topicIdentifier.stringValue)
+
+
+    @IBAction func searchUOTopics(_ sender: Any) {
+        NSLog(UOSearchText.stringValue)
         
-        
-        if let url = URL(string: "https://flo.flinders.edu.au/course/view.php?id="+topicIdentifier.stringValue), NSWorkspace.shared.open(url) {
-            print("Default browser was successfully opened")
+        if let url = URL(string: "https://uo.unisa.edu.au/course/search.php?search="+UOSearchText.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! ?? ""), NSWorkspace.shared.open(url) {
             cleanUp()
         }
     }
     
-    @IBAction func searchTopics(_ sender: Any) {
-        NSLog(topicSearchtext.stringValue)
+    @IBAction func searchLOTopics(_ sender: Any) {
+        NSLog(LOSearchText.stringValue)
         
-        if let url = URL(string: "https://flo.flinders.edu.au/course/search.php?search="+topicSearchtext.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! ?? ""), NSWorkspace.shared.open(url) {
-            print("Default browser was successfully opened")
+        if let url = URL(string: "https://lo.unisa.edu.au/course/search.php?search="+LOSearchText.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! ?? ""), NSWorkspace.shared.open(url) {
             cleanUp()
         }
     }
@@ -37,37 +34,26 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
     @IBAction func searchPeople(_ sender: Any) {
         NSLog(directorySearch.stringValue)
         
-        var theUrl = "https://www.flinders.edu.au/people?q=" + directorySearch.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! ?? ""
-        theUrl = theUrl + "#results-search-response"
+        var theUrl = "https://people.unisa.edu.au/" + directorySearch.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! ?? ""
         
         if let url = URL(string: theUrl), NSWorkspace.shared.open(url) {
-            print("Default browser was successfully opened")
             cleanUp()
         }
     }
     
-    @IBAction func searchTopicsStuSys(_ sender: Any) {
-        NSLog(topicSearchStuSys.stringValue)
-        
-        let theUrl = "https://www.flinders.edu.au/webapps/stusys/index.cfm/topic/main/?topic=" + topicSearchStuSys.stringValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        if let url = URL(string: theUrl), NSWorkspace.shared.open(url) {
-            print("Default browser was successfully opened")
-            cleanUp()
-        }
-    }
     
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         if control.tag == 0 {
             if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
                 // Do something against ENTER key
-                jumpToTopics(self)
+                searchUOTopics(self)
                 return true
             } else {
                 return false
             }
         } else if control.tag == 1 {
             if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
-                searchTopics(self)
+                searchLOTopics(self)
                 return true
             } else {
                 return false
@@ -80,21 +66,15 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
                 return false
             }
         } else {
-            if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
-                searchTopicsStuSys(self)
-                return true
-            } else {
-                return false
-            }
+            return false
         }
     }
     
     func cleanUp() {
         // Empty our search fields and close the window
-        topicSearchtext.stringValue = ""
-        topicIdentifier.stringValue = ""
+        UOSearchText.stringValue = ""
+        LOSearchText.stringValue = ""
         directorySearch.stringValue = ""
-        topicSearchStuSys.stringValue = ""
         self.view.window?.close()
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="FLO Launcher" id="1Xt-HY-uBw">
+                            <menuItem title="Launcher" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="FLO Launcher" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Launcher" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About FLO Launcher" id="5kV-Vb-QxS">
+                                        <menuItem title="About Launcher" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -30,7 +30,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide FLO Launcher" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Launcher" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -48,7 +48,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit FLO Launcher" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Launcher" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -679,42 +679,42 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="67" y="-66"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="FLO_Launcher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="362" height="230"/>
+                        <rect key="frame" x="0.0" y="0.0" width="362" height="171"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpT-jp-odl">
-                                <rect key="frame" x="258" y="155" width="90" height="32"/>
+                                <rect key="frame" x="259" y="98" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Jump to" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K0o-Rp-3SK">
+                                <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K0o-Rp-3SK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="jumpToTopics:" target="XfG-lQ-9wD" id="dx4-tc-nYP"/>
+                                    <action selector="searchUOTopics:" target="XfG-lQ-9wD" id="VWP-j4-FKq"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdK-2U-j1O">
-                                <rect key="frame" x="258" y="124" width="90" height="32"/>
+                                <rect key="frame" x="259" y="67" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IBp-9T-V31">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="searchTopics:" target="XfG-lQ-9wD" id="tin-xU-7Ej"/>
+                                    <action selector="searchLOTopics:" target="XfG-lQ-9wD" id="RgS-Ls-oLk"/>
                                 </connections>
                             </button>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" tag="1" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-9F-8xv">
-                                <rect key="frame" x="20" y="130" width="240" height="22"/>
+                                <rect key="frame" x="21" y="73" width="240" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search topics on FLO" usesSingleLineMode="YES" bezelStyle="round" id="94D-dt-0Xi">
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search LO Courses" usesSingleLineMode="YES" bezelStyle="round" id="94D-dt-0Xi">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -724,9 +724,9 @@
                                 </connections>
                             </searchField>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrB-8g-f7H">
-                                <rect key="frame" x="20" y="162" width="240" height="22"/>
+                                <rect key="frame" x="21" y="105" width="240" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Jump to Topic FLO ID" usesSingleLineMode="YES" bezelStyle="round" id="LbW-jy-pVI">
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search UO Courses" usesSingleLineMode="YES" bezelStyle="round" id="LbW-jy-pVI">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -736,16 +736,16 @@
                                 </connections>
                             </searchField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xw3-Eb-pgI">
-                                <rect key="frame" x="143" y="192" width="76" height="16"/>
+                                <rect key="frame" x="133" y="135" width="96" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="FLO Search" id="mge-ez-ZmX">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="UO/LO Search" id="mge-ez-ZmX">
                                     <font key="font" metaFont="systemMedium" size="13"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-1Y-3ZC">
-                                <rect key="frame" x="134" y="104" width="94" height="16"/>
+                                <rect key="frame" x="134" y="49" width="94" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="People Search" id="E5F-ed-stW">
                                     <font key="font" metaFont="systemMedium" size="13"/>
@@ -754,18 +754,18 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9g-c6-mRH">
-                                <rect key="frame" x="258" y="68" width="90" height="32"/>
+                                <rect key="frame" x="258" y="13" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="btO-fS-xkF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="searchPeople:" target="XfG-lQ-9wD" id="3Lo-5h-Tc4"/>
+                                    <action selector="searchPeople:" target="XfG-lQ-9wD" id="5uo-qX-rad"/>
                                 </connections>
                             </button>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" tag="2" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-fY-cPH">
-                                <rect key="frame" x="20" y="74" width="240" height="22"/>
+                                <rect key="frame" x="20" y="19" width="240" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search people" usesSingleLineMode="YES" bezelStyle="round" id="LXx-YB-64F">
                                     <font key="font" metaFont="system"/>
@@ -776,50 +776,17 @@
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="Phj-pc-Rv1"/>
                                 </connections>
                             </searchField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-Q0-Fk9">
-                                <rect key="frame" x="259" y="14" width="90" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ut5-rK-s9o">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="searchTopicsStuSys:" target="XfG-lQ-9wD" id="z92-Nq-bQu"/>
-                                </connections>
-                            </button>
-                            <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" tag="3" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ7-s8-21D">
-                                <rect key="frame" x="21" y="20" width="240" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search topics" usesSingleLineMode="YES" bezelStyle="round" id="fRd-eB-0Ph">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </searchFieldCell>
-                                <connections>
-                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="M7C-JQ-sWY"/>
-                                </connections>
-                            </searchField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNz-bc-myc">
-                                <rect key="frame" x="139" y="50" width="85" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Topic Search" id="Qj9-UF-ngz">
-                                    <font key="font" metaFont="systemMedium" size="13"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="directorySearch" destination="gz5-fY-cPH" id="u0v-nY-3q1"/>
-                        <outlet property="topicIdentifier" destination="TrB-8g-f7H" id="ltu-5w-YAa"/>
-                        <outlet property="topicSearchStuSys" destination="bJ7-s8-21D" id="cKn-Sa-LcI"/>
-                        <outlet property="topicSearchtext" destination="jbk-9F-8xv" id="ppY-xB-TC5"/>
+                        <outlet property="LOSearchText" destination="jbk-9F-8xv" id="p3m-Zg-M9c"/>
+                        <outlet property="UOSearchText" destination="TrB-8g-f7H" id="dhD-J5-EMe"/>
+                        <outlet property="directorySearch" destination="gz5-fY-cPH" id="9br-pc-Hj3"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="187"/>
+            <point key="canvasLocation" x="74" y="169.5"/>
         </scene>
     </scenes>
 </document>
