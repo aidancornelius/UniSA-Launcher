@@ -6,4 +6,4 @@ This app runs on MacOS 10.14+
 
 Licensed under MIT.
 
-![Screeenshot](https://github.com/aidancornelius/FLO-Launcher/raw/master/Resources/Screenshot_of_UniSA_Launcher_1.1.png)
+![Screeenshot](https://github.com/aidancornelius/UniSA-Launcher/raw/master/Resources/Screenshot_of_UniSA_Launcher_1.1.png)
