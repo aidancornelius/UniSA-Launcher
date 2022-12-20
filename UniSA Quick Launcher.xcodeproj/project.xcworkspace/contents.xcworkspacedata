@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FLO Launcher.xcodeproj">
+      location = "self:/Users/aidancornelius/Documents/code/FLO Launcher/UniSA Quick Launcher.xcodeproj">
    </FileRef>
 </Workspace>

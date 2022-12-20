@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -675,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="FLO_Launcher" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="UniSA_Launcher" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -684,13 +684,18 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="FLO_Launcher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="UniSA_Launcher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="362" height="171"/>
+                        <rect key="frame" x="0.0" y="0.0" width="362" height="197"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3he-uG-Bos">
+                                <rect key="frame" x="294" y="129" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="proportionallyDown" image="UniSA Logo" id="yiD-7D-gpq"/>
+                            </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpT-jp-odl">
-                                <rect key="frame" x="259" y="98" width="90" height="32"/>
+                                <rect key="frame" x="259" y="99" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K0o-Rp-3SK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -701,7 +706,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdK-2U-j1O">
-                                <rect key="frame" x="259" y="67" width="90" height="32"/>
+                                <rect key="frame" x="259" y="68" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IBp-9T-V31">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -712,7 +717,7 @@
                                 </connections>
                             </button>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" tag="1" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-9F-8xv">
-                                <rect key="frame" x="21" y="73" width="240" height="22"/>
+                                <rect key="frame" x="21" y="74" width="240" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search LO Courses" usesSingleLineMode="YES" bezelStyle="round" id="94D-dt-0Xi">
                                     <font key="font" metaFont="system"/>
@@ -724,7 +729,7 @@
                                 </connections>
                             </searchField>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrB-8g-f7H">
-                                <rect key="frame" x="21" y="105" width="240" height="22"/>
+                                <rect key="frame" x="21" y="106" width="240" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search UO Courses" usesSingleLineMode="YES" bezelStyle="round" id="LbW-jy-pVI">
                                     <font key="font" metaFont="system"/>
@@ -736,7 +741,7 @@
                                 </connections>
                             </searchField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xw3-Eb-pgI">
-                                <rect key="frame" x="133" y="135" width="96" height="16"/>
+                                <rect key="frame" x="19" y="136" width="96" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="UO/LO Search" id="mge-ez-ZmX">
                                     <font key="font" metaFont="systemMedium" size="13"/>
@@ -744,17 +749,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-1Y-3ZC">
-                                <rect key="frame" x="134" y="49" width="94" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="People Search" id="E5F-ed-stW">
-                                    <font key="font" metaFont="systemMedium" size="13"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9g-c6-mRH">
-                                <rect key="frame" x="258" y="13" width="90" height="32"/>
+                                <rect key="frame" x="258" y="14" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="btO-fS-xkF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -765,7 +761,7 @@
                                 </connections>
                             </button>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" tag="2" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-fY-cPH">
-                                <rect key="frame" x="20" y="19" width="240" height="22"/>
+                                <rect key="frame" x="20" y="20" width="240" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search people" usesSingleLineMode="YES" bezelStyle="round" id="LXx-YB-64F">
                                     <font key="font" metaFont="system"/>
@@ -776,6 +772,24 @@
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="Phj-pc-Rv1"/>
                                 </connections>
                             </searchField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4r-T8-j8e">
+                                <rect key="frame" x="21" y="154" width="183" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Search UO and LO courses" id="KVy-uf-lyK">
+                                    <font key="font" size="14" name="AltisUniSA-Bold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-1Y-3ZC">
+                                <rect key="frame" x="19" y="50" width="94" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="People Search" id="E5F-ed-stW">
+                                    <font key="font" metaFont="systemMedium" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -786,7 +800,10 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="169.5"/>
+            <point key="canvasLocation" x="74" y="182.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="UniSA Logo" width="164.60000610351562" height="131.39999389648438"/>
+    </resources>
 </document>

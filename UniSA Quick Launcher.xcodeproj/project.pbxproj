@@ -14,13 +14,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1213373324E4CA3900FB810B /* FLO Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FLO Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1213373324E4CA3900FB810B /* UniSA Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UniSA Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1213373624E4CA3900FB810B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1213373824E4CA3900FB810B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1213373A24E4CA3C00FB810B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1213373D24E4CA3C00FB810B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1213373F24E4CA3C00FB810B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1213374024E4CA3C00FB810B /* FLO_Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FLO_Launcher.entitlements; sourceTree = "<group>"; };
+		125F3D8E29525DE500472A71 /* Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Launcher.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 		1213372A24E4CA3900FB810B = {
 			isa = PBXGroup;
 			children = (
-				1213373524E4CA3900FB810B /* FLO Launcher */,
+				1213373524E4CA3900FB810B /* UniSA Launcher */,
 				1213373424E4CA3900FB810B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,12 +45,12 @@
 		1213373424E4CA3900FB810B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1213373324E4CA3900FB810B /* FLO Launcher.app */,
+				1213373324E4CA3900FB810B /* UniSA Launcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1213373524E4CA3900FB810B /* FLO Launcher */ = {
+		1213373524E4CA3900FB810B /* UniSA Launcher */ = {
 			isa = PBXGroup;
 			children = (
 				1213373624E4CA3900FB810B /* AppDelegate.swift */,
@@ -58,17 +58,17 @@
 				1213373A24E4CA3C00FB810B /* Assets.xcassets */,
 				1213373C24E4CA3C00FB810B /* Main.storyboard */,
 				1213373F24E4CA3C00FB810B /* Info.plist */,
-				1213374024E4CA3C00FB810B /* FLO_Launcher.entitlements */,
+				125F3D8E29525DE500472A71 /* Launcher.entitlements */,
 			);
-			path = "FLO Launcher";
+			path = "UniSA Launcher";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1213373224E4CA3900FB810B /* FLO Launcher */ = {
+		1213373224E4CA3900FB810B /* UniSA Launcher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1213374324E4CA3C00FB810B /* Build configuration list for PBXNativeTarget "FLO Launcher" */;
+			buildConfigurationList = 1213374324E4CA3C00FB810B /* Build configuration list for PBXNativeTarget "UniSA Launcher" */;
 			buildPhases = (
 				1213372F24E4CA3900FB810B /* Sources */,
 				1213373024E4CA3900FB810B /* Frameworks */,
@@ -78,9 +78,9 @@
 			);
 			dependencies = (
 			);
-			name = "FLO Launcher";
+			name = "UniSA Launcher";
 			productName = "FLO Launcher";
-			productReference = 1213373324E4CA3900FB810B /* FLO Launcher.app */;
+			productReference = 1213373324E4CA3900FB810B /* UniSA Launcher.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1213372E24E4CA3900FB810B /* Build configuration list for PBXProject "FLO Launcher" */;
+			buildConfigurationList = 1213372E24E4CA3900FB810B /* Build configuration list for PBXProject "UniSA Quick Launcher" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1213373224E4CA3900FB810B /* FLO Launcher */,
+				1213373224E4CA3900FB810B /* UniSA Launcher */,
 			);
 		};
 /* End PBXProject section */
@@ -271,20 +271,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "FLO Launcher/FLO_Launcher.entitlements";
+				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PROJECT_NAME).profdata";
+				CODE_SIGN_ENTITLEMENTS = "UniSA Launcher/Launcher.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "FLO Launcher/Info.plist";
+				INFOPLIST_FILE = "UniSA Launcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 2021.10;
+				MARKETING_VERSION = 2022.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.quicklauncher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -295,20 +296,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "FLO Launcher/FLO_Launcher.entitlements";
+				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PROJECT_NAME).profdata";
+				CODE_SIGN_ENTITLEMENTS = "UniSA Launcher/Launcher.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "FLO Launcher/Info.plist";
+				INFOPLIST_FILE = "UniSA Launcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 2021.10;
+				MARKETING_VERSION = 2022.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.quicklauncher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -318,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1213372E24E4CA3900FB810B /* Build configuration list for PBXProject "FLO Launcher" */ = {
+		1213372E24E4CA3900FB810B /* Build configuration list for PBXProject "UniSA Quick Launcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1213374124E4CA3C00FB810B /* Debug */,
@@ -327,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1213374324E4CA3C00FB810B /* Build configuration list for PBXNativeTarget "FLO Launcher" */ = {
+		1213374324E4CA3C00FB810B /* Build configuration list for PBXNativeTarget "UniSA Launcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1213374424E4CA3C00FB810B /* Debug */,

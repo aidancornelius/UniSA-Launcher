@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  FLO Launcher
+//  Quick Launcher
 //
 //  Created by Aidan Cornelius-Bell on 13/8/20.
 //  Copyright © 2020 Aidan Cornelius-Bell. All rights reserved.
@@ -13,7 +13,6 @@ class ViewController: NSViewController, NSTextFieldDelegate, NSSearchFieldDelega
     @IBOutlet weak var UOSearchText: NSSearchField!
     @IBOutlet weak var LOSearchText: NSSearchField!
     @IBOutlet weak var directorySearch: NSSearchField!
-
 
     @IBAction func searchUOTopics(_ sender: Any) {
         NSLog(UOSearchText.stringValue)

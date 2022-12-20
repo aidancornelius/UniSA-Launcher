@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  FLO Launcher
+//  Quick Launcher
 //
 //  Created by Aidan Cornelius-Bell on 13/8/20.
 //  Copyright © 2020 Aidan Cornelius-Bell. All rights reserved.
@@ -24,6 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = ViewController.freshController()
+        
+        NSApp.appearance = NSAppearance(named: .darkAqua)
     }
     
     @objc func togglePopover(_ sender: Any?) {
